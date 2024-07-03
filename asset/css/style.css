@@ -1,0 +1,266 @@
+body * {
+  margin: 0px;
+  padding: 0%;
+}
+
+.grid-padre {
+  display: grid;
+  grid-template-areas:
+    "menu menu "
+    "main main"
+    "footer footer ";
+  grid-template-columns: 10fr 1.5fr;
+}
+.menu-ul ul {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  list-style: none;
+}
+.menu button {
+  padding: 5px;
+  background-color: rgb(241, 69, 69);
+}
+.menu button {
+  transition: background-color 1s;
+}
+
+.menu button:hover {
+  background-color: rgb(2, 0, 0);
+}
+.menu-ul li {
+  padding: 8px;
+}
+
+.menu-ul a {
+  color: aliceblue;
+  text-decoration: none;
+}
+.menu {
+  background-color: rgba(210, 43, 43, 0.845);
+  grid-area: menu;
+}
+.main {
+  background-color: rgba(210, 43, 43, 0.845);
+  grid-area: main;
+  display: grid;
+  grid-template-areas: "uno" "dos" "tres" "cuatro" "cinco" "seis";
+}
+.main h2 {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(64, 0, 0, 0.82);
+  color: aliceblue;
+  padding: 4px;
+}
+
+.uno {
+  grid-area: uno;
+}
+.dos {
+  grid-area: dos;
+}
+.tres {
+  grid-area: tres;
+}
+.cuatro {
+  grid-area: cuatro;
+}
+.cinco {
+  grid-area: cinco;
+}
+.seis {
+  grid-area: seis;
+}
+.footer {
+  height: 100%;
+  background-color: rgba(210, 43, 43, 0.845);
+  grid-area: footer;
+  display: grid;
+  grid-template-areas:
+    "info icono redes"
+    "info dedicatoria redes";
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: info;
+  padding: 4px;
+}
+.info li {
+  justify-content: center;
+  text-align: center;
+  font-size: small;
+  list-style: none;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  grid-area: icono;
+}
+
+.logo img {
+  width: 96px;
+  height: 48px;
+}
+.dedicatoria {
+  display: flex;
+  justify-content: center;
+  grid-area: dedicatoria;
+  font-size: smaller;
+  text-align: center;
+  padding: 4px;
+}
+.redes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: redes;
+}
+.redes h2 {
+  padding: 4px;
+}
+
+.redes-icon {
+  display: flex;
+  justify-content: space-around;
+}
+
+.galeria {
+  overflow-y: scroll;
+}
+
+.card {
+  grid-area: card;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 2s;
+}
+.card:hover {
+  transform: scale(1.2);
+}
+li img {
+  width: 80%;
+}
+.card-img-top {
+  width: 80%;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card .card-body {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  color: aliceblue;
+  background-color: rgb(0, 0, 0);
+  width: 60%;
+}
+
+@media (min-width: 768px) and (max-width: 990px) {
+  .main {
+    overflow-x: scroll;
+    background-color: rgba(210, 43, 43, 0.845);
+    display: grid;
+    grid-template-areas:
+      "uno dos"
+      "tres cuatro"
+      "cinco seis"
+      "sin-azucar sin-azucar"
+      "siete ocho"
+      "nueve diez"
+      "once doce";
+  }
+
+  .menu-ul ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  li {
+    width: 100px;
+  }
+  li img {
+    width: 100%;
+    height: 30%;
+  }
+  .card-img-top {
+    width: 70%;
+  }
+  .siete {
+    grid-area: siete;
+  }
+  .ocho {
+    grid-area: ocho;
+  }
+  .nueve {
+    grid-area: nueve;
+  }
+  .diez {
+    grid-area: diez;
+  }
+
+  .once {
+    grid-area: once;
+  }
+  .doce {
+    grid-area: doce;
+  }
+  .sin-azucar {
+    grid-area: sin-azucar;
+  }
+  .card-body {
+    flex: 1;
+  }
+}
+@media (min-width: 991px) {
+  .main {
+    height: 100vh;
+    overflow-y: scroll;
+    background-color: rgba(210, 43, 43, 0.845);
+    display: grid;
+    grid-template-areas: "uno dos tres" "cuatro cinco seis" "sin-azucar sin-azucar sin-azucar" "siete ocho nueve" "diez once doce";
+  }
+  .siete {
+    grid-area: siete;
+  }
+  .ocho {
+    grid-area: ocho;
+  }
+  .nueve {
+    grid-area: nueve;
+  }
+  .diez {
+    grid-area: diez;
+  }
+
+  .once {
+    grid-area: once;
+  }
+  .doce {
+    grid-area: doce;
+  }
+  .sin-azucar {
+    grid-area: sin-azucar;
+  }
+
+  .menu-ul ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+  }
+  .grid-padre {
+    grid-template-areas:
+      "main menu "
+      "main menu"
+      "footer footer ";
+  }
+}
